@@ -6,6 +6,7 @@ import BlogForm from "./Components/BlogForm";
 import Blogs from "./Pages/Blogs";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import EditForm from "./Components/EditForm";
 
 const router = createBrowserRouter([
 	{
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
 				path: "blog-form",
 				element: <BlogForm />,
 			},
+			{
+				path:"edit/:id",
+				element:<EditForm/>
+			}
 		],
 	},
 ]);
@@ -31,7 +36,4 @@ root.render(
 	</React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
